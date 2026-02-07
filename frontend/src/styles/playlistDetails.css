@@ -1,0 +1,285 @@
+/* ============================================ */
+/* Playlist Details Page Styles                 */
+/* ============================================ */
+
+.pd-page {
+  padding: 32px;
+  min-height: 100%;
+  background: linear-gradient(180deg, #0f0f23 0%, #0a0a0a 400px);
+}
+
+/* Header */
+.pd-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 28px;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pd-cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.pd-cover-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1a1a3e, #2a2a5e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.pd-info h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.pd-meta {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+/* Sharing Controls */
+.pd-sharing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.pd-share-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #aaa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pd-share-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.pd-share-toggle.public {
+  background: rgba(76, 175, 80, 0.12);
+  color: #4caf50;
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.pd-share-toggle:disabled {
+  opacity: 0.5;
+}
+
+.pd-copy-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(33, 150, 243, 0.12);
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.pd-copy-link:hover {
+  background: rgba(33, 150, 243, 0.2);
+}
+
+/* Song List */
+.pd-song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pd-song-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  gap: 14px;
+}
+
+.pd-song-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.pd-song-index {
+  width: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.pd-song-item:hover .pd-song-index {
+  color: #ff4081;
+}
+
+.pd-song-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pd-song-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.pd-song-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pd-song-artist {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Options */
+.pd-song-options {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.pd-options-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.pd-song-item:hover .pd-options-btn {
+  opacity: 1;
+}
+
+.pd-options-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.pd-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #1e1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  overflow: hidden;
+  min-width: 140px;
+}
+
+.pd-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 13px;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.pd-dropdown button:hover {
+  background: rgba(255, 77, 77, 0.1);
+}
+
+/* Empty State */
+.pd-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #555;
+}
+
+.pd-empty-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.pd-empty p {
+  font-size: 15px;
+  color: #888;
+}
+
+/* Loading / Error */
+.pd-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: #555;
+  font-size: 15px;
+}
+
+.pd-error {
+  text-align: center;
+  padding: 40px;
+  color: #ff4081;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pd-page {
+    padding: 20px 16px;
+  }
+  .pd-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .pd-cover, .pd-cover-placeholder {
+    width: 160px;
+    height: 160px;
+  }
+  .pd-info h1 {
+    font-size: 24px;
+  }
+}
